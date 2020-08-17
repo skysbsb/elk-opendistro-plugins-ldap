@@ -113,7 +113,7 @@ EXPOSE 5601
 
 # Para rodar:
 É necessário ter o docker instalado. Eu baixei o [Docker Desktop para Windows](https://docs.docker.com/docker-for-windows/install/) e integrei com meu [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Assim pude usar os comandos do Docker no Windows usando o Terminal novo do WSL.
-![Terminal](https://docs.microsoft.com/pt-br/windows/wsl/media/store.png) 
+Basta entrar na pasta e executar o comando: `docker-compose up -d`
 
 
 # LDAP
