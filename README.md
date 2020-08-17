@@ -117,13 +117,23 @@ Vão subir 4 containers.
   * https://localhost:6443
   * user: cn=admin,dc=example,dc=org senha: changethis
 
-# Documentacao
+# Documentação
 Para mais informações com relação a esses containers, acesse: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/
 
-# LDAP
-You can access the administration tool at https://localhost:6443. Acknowledge the security warning and log in using cn=admin,dc=example,dc=org and changethis.
+# Avaliação
+Deu pra ver que o Elasticsearch (BASIC) funcionou bem com os plugins do Open Distro feitos para o Elasticsearch (OSS). Algumas coisas visualmente não funcionaram (Anomaly), ou ficaram meio bugadas, porém não consegui identificar nada literalmente quebrado, porém, eu ainda não tive tempo de fazer os testes exaustivamente.
 
-* psantos is in the Administrator and Developers groups. jroe and jdoe are in the Developers group. The security plugin loads these groups as backend roles.
-* roles_mapping.yml maps the Administrator and Developers LDAP groups (as backend roles) to security roles so that users gain the appropriate permissions after authenticating.
-* curl -XPUT https://localhost:9200/new-index/_doc/1 -H 'Content-Type: application/json' -d '{"title": "Spirited Away"}' -u psantos:password -
-* curl -XGET https://localhost:9200/new-index/_search?pretty -u jroe:password -k
+A parte de Alerting funcionou tranquilo. Deu para criar o monitor, trigger e destination pela interface do Kibana sem problemas. 
+
+Deu para usar consultas SQL usando a API do plugin do Open Distro.
+
+Deu para integrar com o LDAP e criar roles específicas para grupos do LDAP. O Open Distro mantém as informações de segurança todas dentro de um índice do ELK, porém é possível também alterar os arquivos de configuração dentro (ou fora) do container e rodar o securityadmin.sh para sincronizar com o ELK via API. Para adicionar algum método de authentication ou autorization (authc authz) ou a forma de acesso ao cluster (basic, kerberos, etc.), pode-se alterar o arquivo de configuração config.yml.
+
+Deu para criar e editar CANVAS, que faz parte da versão BASIC.
+
+Deu para monitorar o cluster com o xpack.
+
+Ou seja, deu pra ter o melhor dos dois mundos (ELK BASIC + OPEN DISTRO), porém, como alertado lá no começo, o Open Distro não recomenda que seja usado dessa maneira e existem muitas coisas que precisam ser testadas antes de seguir por esse caminho. O risco de ter alguma coisa quebrada lá na frente ou de alguma coisa não funcionar tem que ser levado em conta.
+
+
+
