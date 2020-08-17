@@ -108,14 +108,14 @@ O docker vai se encarregar de baixar a imagem do Elasticsearch (basic) direto do
 Vão subir 4 containers.
 * Um elasticsearch (basic) com os plugins do Open Distro instalados.
 * Um kibana (basic) com os plugins do Open Distro instalados
-** https://localhost:5601
-** admin:admin (internal user)
-** jroe:password (ldap user com role de admin)
-** psantos:password (ldap user com role de developer/readonly)
+  * https://localhost:5601
+  * admin:admin (internal user)
+  * jroe:password (ldap user com role de admin)
+  * psantos:password (ldap user com role de developer/readonly)
 * Um openldap
 * Um phpldapadmin
-** https://localhost:6443
-** user: cn=admin,dc=example,dc=org senha: changethis
+  * https://localhost:6443
+  * user: cn=admin,dc=example,dc=org senha: changethis
 
 # Documentacao
 Para mais informações com relação a esses containers, acesse: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/
