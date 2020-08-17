@@ -42,7 +42,7 @@ Procurei bastante na internet e a resposta é a seguinte: Sim, é possível, por
 Porém pesquisando a respeito, encontrei várias pessoas que estão usando dessa forma, inclusive justamente para a finalidade que eu estava pensando em usar ([Security](https://medium.com/@ibrahim.ayadhi/deploying-of-infrastructure-and-technologies-for-a-soc-as-a-service-socass-8e1bbb885149)):
 ![SoC with ELK](https://miro.medium.com/max/1000/1*TAoB_84vsDlRA3LhWAuxxA.png)
 
-Pesquisando no github, encontrei DIVERSOS repositórios de código públicos contendo arquivos Dockerfile para gerar containers do Elasticsearch (BASIC) com os plugins instalados. Basta pesquisar: filename:Dockerfile elasticsearch-plugin opendistro
+Pesquisando no github, encontrei DIVERSOS repositórios de código públicos contendo arquivos Dockerfile para gerar containers do Elasticsearch (BASIC) com os plugins instalados. Basta pesquisar: `filename:Dockerfile elasticsearch-plugin opendistro`
 
 Assim sendo, resolvi seguir esse caminho para testar. Baixei um [exemplo](https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/) do [OpenDistro usando LDAP](https://opendistro.github.io/for-elasticsearch-docs/assets/examples/ldap-example.zip) e alterei algumas coisas para testar se funcionaria o Elasticsearch (basic) com alguns dos plugins do Open Distro.
 
