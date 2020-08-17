@@ -114,7 +114,7 @@ The docker service will be in charge of downloading the Elasticsearch (basic) im
    * https://localhost:6443
    * user: cn=admin,dc=example,dc=org senha: changethis
 
-# Documentação
+# Documentation
 For more information regarding these containers, visit: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/
 
 # Evaluation
