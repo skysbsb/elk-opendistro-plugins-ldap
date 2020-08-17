@@ -54,7 +54,7 @@ Gerei os seguintes Dockerfile com os seguintes plugins do Open Distro:
 * Alerting
 * Index Management
 
-* Elasticsearch 7.8.0 (sem ser OSS) com os seguintes plugins do OpenDistro:
+Esse é o Dockerfile do Elasticsearch 7.8.0 (sem ser OSS) com os plugins do Open Distro:
 
 ```Dockerfile
 ARG VERSION="7.8.0"
@@ -79,7 +79,7 @@ EXPOSE 9200
 
 ```
 
-* Kibana 7.8.0 (sem ser OSS) com os seguintes plugins do Open Distro:
+Esse é o Dockerfile do Kibana 7.8.0 (sem ser OSS) com os plugins do Open Distro:
 ```Dockerfile
 ARG VERSION="7.8.0"
 
