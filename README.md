@@ -35,9 +35,8 @@ O Opendistro for Elasticsearch baseado na versão Open Source do Elasticsearch e
 
 Ai pintou uma dúvida.. será que seria possível rodar a versão BASIC do ELK com os plugins que o Open Distro desenvolveu para a versão OSS?
 Procurei bastante na internet e a resposta é a seguinte: Sim, é possível, porém possui uma série de limitações. E, oficialmente falando, não é recomendado:
-* https://github.com/opendistro-for-elasticsearch/security-kibana-plugin/issues/32
 * https://discuss.opendistrocommunity.dev/t/is-open-distro-production-ready/2631/6
-* https://doc.punchplatform.com/6.0.1/Reference_Guide/Security/Security_opendistro.html
+* https://discuss.opendistrocommunity.dev/t/elasticsearch-security-config/2461
 
 Porém pesquisando a respeito, encontrei várias pessoas que estão usando dessa forma, inclusive justamente para a finalidade que eu estava pensando em usar ([Security](https://medium.com/@ibrahim.ayadhi/deploying-of-infrastructure-and-technologies-for-a-soc-as-a-service-socass-8e1bbb885149)):
 ![SoC with ELK](https://miro.medium.com/max/1000/1*TAoB_84vsDlRA3LhWAuxxA.png)
