@@ -1,4 +1,4 @@
-# elk-opendistro-plugins-ldap
+# ElasticSearch (BASIC) com plugins do Open Distro for Elasticsearch
 
 O [Open Distro for Elasticsearch](https://opendistro.github.io/for-elasticsearch/) é uma criação da Amazon baseado no Elasticsearch. O problema é que foi desenvolvido todo em cima da [versão Open Source (OSS - Apache 2.0) do Elasticsearch, e não da versão BASIC](https://www.elastic.co/pt/subscriptions), justamente por conta do licenciamento da versão BASIC sem mais restritivo.
 
@@ -6,23 +6,30 @@ Assim sendo, ele não contém uma série de funcionalidades da versão BASIC, em
 * CANVAS
 * APM
 * ILM
-* Monitoramento do cluster
+* Monitoramento do cluster (xpack)
 * Controle de acesso
-* Node to Node Encryption
+* Node to Node Encryption (xpack)
 * SQL
 * Anomaly Detection
 
 
 E também, obviamente, não possui as funcionalidades da versão paga do Elasticsearch:
 * Alerting
-* LDAP, AD, KERBEROS, SAML integrantions
 * Machine Learning
 * Graph
 * JDBC
-* Authentication
-* Access Control
+* Authentication LDAP, AD, KERBEROS, SAML integrantions
+* Access Control (a nível de field)
 
-Porém, eles desenvolveram todas essas funcionalidades em cima da versão OSS
+Porém, eles desenvolveram algumas dessas funcionalidades essenciais em cima da versão OSS. Algumas (a maioria) podem ser instaladas como plugins do Elasticsearch, e algumas outras somente rodando o core do Open Distro. São elas:
+* Security (plugin): Similar ao Authentication + Access Control a nível de field + plugin para o Kibana
+* Alerting (plugin): Similar ao alerting + plugin para o Kibana
+* Index Management (plugin): Similar ao ILM + plugin para o Kibana
+* SQL (plugin): Similar ao SQL
+* KNN (core): Machine learning
+* Anomaly Detection (plugin)
+* Performance Analyzer / Root Cause Analysis (plugin/core): similar ao monitor
+
 
 O Opendistro for Elasticsearch baseado na versão Open Source do Elasticsearch está disponível em Linux/Windows e Docker. Eles também distribuiram os plugins separadamente, e todo o código fonte do Opendistro é free.
 
