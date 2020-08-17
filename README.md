@@ -46,7 +46,13 @@ Pesquisando no github, encontrei DIVERSOS repositórios de código públicos con
 
 Assim sendo, resolvi seguir esse caminho para testar. Baixei um [exemplo](https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/) do [OpenDistro usando LDAP](https://opendistro.github.io/for-elasticsearch-docs/assets/examples/ldap-example.zip) e alterei algumas coisas para testar se funcionaria o Elasticsearch (basic) com alguns dos plugins do Open Distro.
 
-Gerei os seguintes Dockerfile:
+Gerei os seguintes Dockerfile com os seguintes plugins do Open Distro:
+* Security
+* SQL
+* Job Scheduler (necessário para o Alerting funcionar)
+* Anomaly Detection (só funciona via API)
+* Alerting
+* Index Management
 
 * Elasticsearch 7.8.0 (sem ser OSS) com os seguintes plugins do OpenDistro:
 
@@ -94,8 +100,16 @@ EXPOSE 5601
 
 # Para rodar:
 É necessário ter o docker instalado. Eu baixei o [Docker Desktop para Windows](https://docs.docker.com/docker-for-windows/install/) e integrei com meu [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Assim pude usar os comandos do Docker no Windows usando o Terminal novo do WSL.
-Basta entrar na pasta onde foi feito o clone desse repositório (`git clone https://github.com/skysbsb/elk-opendistro-plugins-ldap.git`) e executar o comando: `docker-compose up -d`
+Basta entrar na pasta onde foi feito o clone desse repositório (`git clone https://github.com/skysbsb/elk-opendistro-plugins-ldap.git`) e executar o comando: `docker-compose up -d`.
 
+O docker vai se encarregar de baixar a imagem do Elasticsearch (basic) direto do registry do Docker Hub, os plugins do Open Distro (de outro repo meu) e instalar este último, naquele.
+
+# Containers
+Vão subir 4 containers.
+* Um elasticsearch (basic) com os plugins do Open Distro instalados.
+* Um kibana (basic) com os plugins do Open Distro instalados.
+* Um openldap
+* Um phpldapadmin
 
 # LDAP
 You can access the administration tool at https://localhost:6443. Acknowledge the security warning and log in using cn=admin,dc=example,dc=org and changethis.
