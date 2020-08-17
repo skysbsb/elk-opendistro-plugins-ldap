@@ -18,7 +18,7 @@ E também, obviamente, não possui as funcionalidades da versão paga do Elastic
 * Machine Learning
 * Graph
 * JDBC
-* Authentication LDAP, AD, KERBEROS, SAML integrantions
+* Authentication LDAP, AD, KERBEROS, SAML integrations
 * Access Control (a nível de field)
 
 Porém, eles desenvolveram algumas dessas funcionalidades essenciais em cima da versão OSS. Algumas (a maioria) podem ser instaladas como plugins do Elasticsearch, e algumas outras somente rodando o core do Open Distro. São elas:
@@ -31,7 +31,7 @@ Porém, eles desenvolveram algumas dessas funcionalidades essenciais em cima da 
 * Performance Analyzer / Root Cause Analysis (plugin/core): similar ao monitor
 
 
-O Opendistro for Elasticsearch baseado na versão Open Source do Elasticsearch está disponível em Linux/Windows e Docker. Eles também distribuiram os plugins separadamente, e todo o código fonte do Opendistro é free.
+O Opendistro for Elasticsearch baseado na versão Open Source do Elasticsearch está disponível em Linux/Windows e Docker. Eles também distribuiram os plugins separadamente, e todo o [código fonte do Opendistro é aberto](https://github.com/opendistro-for-elasticsearch).
 
 Baixei um exemplo do [OpenDistro usando LDAP](https://opendistro.github.io/for-elasticsearch-docs/assets/examples/ldap-example.zip) e só alterei as imagens utilizadas no campo "image:" do docker-compose.yml.
 
