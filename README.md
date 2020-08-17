@@ -1,4 +1,4 @@
-# ElasticSearch (BASIC) com plugins do Open Distro for Elasticsearch
+# Elasticsearch (BASIC) com plugins do Open Distro for Elasticsearch
 
 O [Open Distro for Elasticsearch](https://opendistro.github.io/for-elasticsearch/) é uma criação da Amazon baseado no Elasticsearch. O problema é que foi desenvolvido todo em cima da [versão Open Source (OSS - Apache 2.0) do Elasticsearch, e não da versão BASIC](https://www.elastic.co/pt/subscriptions), justamente por conta do licenciamento.
 
@@ -40,7 +40,7 @@ Procurei bastante na internet e a resposta é a seguinte: Sim, é possível, por
 * https://doc.punchplatform.com/6.0.1/Reference_Guide/Security/Security_opendistro.html
 
 Porém pesquisando a respeito, encontrei várias pessoas que estão usando dessa forma, inclusive justamente para a finalidade que eu estava pensando em usar ([Security](https://medium.com/@ibrahim.ayadhi/deploying-of-infrastructure-and-technologies-for-a-soc-as-a-service-socass-8e1bbb885149)):
-![Image of Yaktocat](https://miro.medium.com/max/1000/1*TAoB_84vsDlRA3LhWAuxxA.png)
+![SoC with ELK](https://miro.medium.com/max/1000/1*TAoB_84vsDlRA3LhWAuxxA.png)
 
 Pesquisando no github, encontrei DIVERSOS repositórios de código públicos contendo arquivos Dockerfile para gerar containers do Elasticsearch (BASIC) com os plugins instalados. Basta pesquisar: filename:Dockerfile elasticsearch-plugin opendistro
 
@@ -111,8 +111,9 @@ EXPOSE 5601
 ```
 
 
- 
-
+# Para rodar:
+É necessário ter o docker instalado. Eu baixei o [Docker Desktop para Windows](https://docs.docker.com/docker-for-windows/install/) e integrei com meu [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Assim pude usar os comandos do Docker no Windows usando o Terminal novo do WSL.
+![Terminal](https://docs.microsoft.com/pt-br/windows/wsl/media/store.png) 
 
 
 # LDAP
