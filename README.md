@@ -1,4 +1,4 @@
-# Elasticsearch (BASIC) com plugins do Open Distro for Elasticsearch
+# Elasticsearch (BASIC) com plugins do Open Distro
 
 O [Open Distro for Elasticsearch](https://opendistro.github.io/for-elasticsearch/) é uma criação da Amazon baseado no Elasticsearch. O problema é que foi desenvolvido todo em cima da [versão Open Source (OSS - Apache 2.0) do Elasticsearch, e não da versão BASIC](https://www.elastic.co/pt/subscriptions), justamente por conta do licenciamento.
 
@@ -21,7 +21,7 @@ E também, obviamente, não possui as funcionalidades da versão paga do Elastic
 * Authentication LDAP, AD, KERBEROS, SAML integrations
 * Access Control (a nível de field)
 
-Porém, o Open Distro desenvolvei algumas dessas principais funcionalidades em cima da versão OSS. Algumas (a maioria) podem ser instaladas como plugins do Elasticsearch, e algumas outras somente rodando o core do Open Distro. São elas:
+Porém, o Open Distro desenvolveu algumas dessas principais funcionalidades em cima da versão OSS. Algumas (a maioria) podem ser instaladas como plugins do Elasticsearch, e algumas outras somente rodando o core do Open Distro. São elas:
 * Security (plugin): Similar ao Authentication + Access Control a nível de field + plugin para o Kibana
 * Alerting (plugin): Similar ao alerting + plugin para o Kibana
 * Index Management (plugin): Similar ao ILM + plugin para o Kibana
@@ -107,9 +107,18 @@ O docker vai se encarregar de baixar a imagem do Elasticsearch (basic) direto do
 # Containers
 Vão subir 4 containers.
 * Um elasticsearch (basic) com os plugins do Open Distro instalados.
-* Um kibana (basic) com os plugins do Open Distro instalados.
+* Um kibana (basic) com os plugins do Open Distro instalados
+** https://localhost:5601
+** admin:admin (internal user)
+** jroe:password (ldap user com role de admin)
+** psantos:password (ldap user com role de developer/readonly)
 * Um openldap
 * Um phpldapadmin
+** https://localhost:6443
+** user: cn=admin,dc=example,dc=org senha: changethis
+
+# Documentacao
+Para mais informações com relação a esses containers, acesse: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/ldap/
 
 # LDAP
 You can access the administration tool at https://localhost:6443. Acknowledge the security warning and log in using cn=admin,dc=example,dc=org and changethis.
