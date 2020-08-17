@@ -31,7 +31,7 @@ However, Open Distro developed some of these main features on top of the Elastic
 
 Opendistro for Elasticsearch based on the Open Source version of Elasticsearch is available on Linux/Windows and Docker. They also distributed the plugins separately and all the [Opendistro source code is open](https://github.com/opendistro-for-elasticsearch).
 
-A question aries.. would it be possible to run the Elasticsearch (BASIC version) with the plugins that Open Distro developed for the OSS version?
+A question arises.. would it be possible to run the Elasticsearch (BASIC version) with the plugins that Open Distro developed for the OSS version?
 I searched the internet a lot and the answer is as follows: Yes, it is possible, but it has a number of limitations. And, officially speaking, it is not recommended:
 * https://discuss.opendistrocommunity.dev/t/is-open-distro-production-ready/2631/6
 * https://discuss.opendistrocommunity.dev/t/elasticsearch-security-config/2461
