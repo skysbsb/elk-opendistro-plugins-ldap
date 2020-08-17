@@ -2,7 +2,7 @@
 
 O [Open Distro for Elasticsearch](https://opendistro.github.io/for-elasticsearch/) é uma criação da Amazon baseado no Elasticsearch. O problema é que foi desenvolvido todo em cima da [versão Open Source (OSS - Apache 2.0) do Elasticsearch, e não da versão BASIC](https://www.elastic.co/pt/subscriptions), justamente por conta do licenciamento.
 
-Assim sendo, ele não contém uma série de funcionalidades da versão BASIC, em especial:
+O Elasticsearch Open Source (OSS) não contém uma série de funcionalidades da versão BASIC, em especial:
 * CANVAS
 * APM
 * ILM
