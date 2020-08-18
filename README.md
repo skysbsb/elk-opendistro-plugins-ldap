@@ -96,8 +96,7 @@ EXPOSE 5601
 
 
 # To run:
-It is necessary to have the docker installed. I downloaded [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/) and integrated with my [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). So I was able to use the Docker commands on Windows using the new WSL Terminal.
-Just enter the folder where this repository was clone (`git clone https://github.com/skysbsb/elk-opendistro-plugins-ldap.git`) and execute the command:` docker-compose up -d`.
+It is necessary to have the docker installed. Just enter the folder where this repository was clone (`git clone https://github.com/skysbsb/elk-opendistro-plugins-ldap.git`) and execute the command:` docker-compose up -d`.
 
 The docker service will be in charge of downloading the Elasticsearch (basic) image directly from the Docker Hub registry, the Open Distro plugins (from another repo of mine) and installing all together.
 
