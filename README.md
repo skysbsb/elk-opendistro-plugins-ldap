@@ -26,7 +26,7 @@ However, Open Distro developed some of these main features on top of the Elastic
 * Index Management (plugin): Similar to ILM + plugin for Kibana
 * SQL (plugin): Similar to SQL
 * KNN (core): Machine learning
-* Anomaly Detection (plugin)
+* Anomaly Detection (plugin): Machine Learning
 * Performance Analyzer / Root Cause Analysis (plugin / core): similar to the monitor
 
 Opendistro for Elasticsearch based on the Open Source version of Elasticsearch is available on Linux/Windows and Docker. They also distributed the plugins separately and all the [Opendistro source code is open](https://github.com/opendistro-for-elasticsearch).
